@@ -18,12 +18,12 @@ int SIZE = 256;    // aggregation grid size (^2)
 boolean BLUR = false;
 float AGGREG_THRESHOLD = 0.25;  // the threshold above which the sum of neighbors must be for aggregation to happen
 float AGGREG_DECAY = 0.95;
-float AGGREG_PREVENT = 0.001;    // self cell threshold under which the aggregation can happen, Tl
+float AGGREG_PREVENT = 0.001;   // self cell threshold under which the aggregation can happen, Tl
 float AGGREG_ADDITION = 1.0;    // how much is added to the aggregate on aggregation
 boolean CIRCLE_DISTRIB = true;  // are the particles distributed within the circle or on the whole canvas
 
 
-// the ratio between the aggregation grid size and the number of particles needs to 
+// the ratio between the aggregation grid size and the number of particles is important
 Particle[] particles = new Particle[NB_PARTICLES];
 float[] aggregation = new float[SIZE*SIZE];
 

@@ -29,19 +29,18 @@ class Particle {
   }
   
   public void randPos () {
-    
-    //
-    float a = random(TWO_PI);
-    float d = random(1);
-    d = pow(d, 0.5);
-    d*= RAD;
-    
-    x = (int) (cos(a) * d + SIZE2);
-    y = (int) (sin(a) * d + SIZE2); 
-    /*
-    x = (int) random(SIZE);
-    y = (int) random(SIZE);
-    */
+    if (CIRCLE_DISTRIB) {
+      float a = random(TWO_PI);
+      float d = random(1);
+      d = pow(d, 0.5);
+      d*= RAD;
+      
+      x = (int) (cos(a) * d + SIZE2);
+      y = (int) (sin(a) * d + SIZE2); 
+    } else {
+      x = (int) random(SIZE);
+      y = (int) random(SIZE);
+    }
   }
   
   public void draw () {
